@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>BRAVA Barbería | Barranquilla — Corte, barba y navaja con turno</title>
+<meta name="description" content="Barbería de oficio en Barranquilla. Corte clásico, diseño de barba y afeitado a navaja. Pide tu turno en el tablero, sin filas.">
+<meta name="theme-color" content="#14110e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600;700&family=Archivo+Narrow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:#ede4d3;color:#14110e;font-family:'Archivo Narrow',Arial,sans-serif;overflow-x:hidden}
+  a{color:#14110e;text-decoration:none}
+  a:hover{color:#a83916}
+  ::selection{background:#a83916;color:#ede4d3}
+  button{font-family:inherit;border:0;cursor:pointer}
+  @media(max-width:760px){
+    [data-split]{border-right:0 !important}
+    [data-split="pad"]{padding-left:26px !important;padding-right:26px !important}
+    [data-split="tight"]{padding-right:0 !important}
+  }
+  @media(max-width:760px){
+    [data-shell]{display:block !important}
+    [data-rail]{position:sticky;top:0;height:auto !important;width:100% !important;flex:none !important;flex-direction:row !important;padding:10px 16px !important}
+    [data-rail] > div{writing-mode:horizontal-tb !important}
+    [data-rail] nav{writing-mode:horizontal-tb !important;flex-direction:row !important;gap:14px !important;font-size:11px !important;letter-spacing:0.12em !important}
+    [data-rail] nav a{padding:13px 0 !important;display:inline-block !important}
+    [data-rail]{padding:4px 16px !important}
+    [data-hero]{grid-template-columns:1fr !important}
+    [data-hero-photo]{min-height:48vh !important}
+    [data-pad]{padding-left:22px !important;padding-right:22px !important}
+  }
+</style>
+</helmet>
+
+<div style="background:#ede4d3;background-image:radial-gradient(circle at 20% 12%,rgba(20,17,14,0.05) 0 1px,transparent 1px),radial-gradient(circle at 70% 60%,rgba(20,17,14,0.04) 0 1px,transparent 1px);background-size:7px 7px,11px 11px;overflow:hidden">
+  <div data-shell style="display:flex;align-items:stretch;min-height:100vh">
+    <aside data-rail style="position:sticky;top:0;height:100vh;width:74px;flex:0 0 74px;background:#14110e;color:#ede4d3;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:22px 0;z-index:70">
+      <div style="font-family:Oswald,sans-serif;font-weight:700;font-size:15px;letter-spacing:0.3em;writing-mode:vertical-rl;text-orientation:mixed">BRAVA</div>
+      <nav style="display:flex;flex-direction:column;gap:26px;writing-mode:vertical-rl;font-family:Oswald,sans-serif;font-weight:500;font-size:12px;letter-spacing:0.26em;text-transform:uppercase">
+        <a href="#carta" style="color:rgba(237,228,211,0.68)">Servicios</a>
+        <a href="#manos" style="color:rgba(237,228,211,0.68)">Manos</a>
+        <a href="#tablero" style="color:rgba(237,228,211,0.68)">Turnos</a>
+        <a href="#local" style="color:rgba(237,228,211,0.68)">Local</a>
+      </nav>
+      <div style="font-family:Oswald,sans-serif;font-size:11px;letter-spacing:0.24em;writing-mode:vertical-rl;color:#d98324">2013</div>
+    </aside>
+
+    <main style="flex:1;min-width:0">
+      <section style="border-bottom:4px solid #14110e">
+        <div data-hero style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr);align-items:stretch">
+          <div data-split="line" data-pad style="padding:54px 40px 40px;border-right:4px solid #14110e;min-width:0">
+            <div data-reveal style="font-family:Oswald,sans-serif;font-weight:600;font-size:13px;letter-spacing:0.34em;text-transform:uppercase;color:#a83916">Barbería · Cra. 45 #72-18 · Barranquilla</div>
+            <h1 data-reveal style="font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(64px,15vw,210px);line-height:0.8;letter-spacing:-0.01em;margin:26px 0 0">SE<br>CORTA<br><span style="color:#a83916">CON</span><br>FILO</h1>
+            <div data-reveal style="height:14px;margin:30px 0 24px;background:repeating-linear-gradient(90deg,#14110e 0 18px,#ede4d3 18px 36px,#d98324 36px 54px,#ede4d3 54px 72px)"></div>
+            <p data-reveal style="max-width:52ch;font-size:18px;line-height:1.6">Trece años en la misma esquina. Escoges servicio, barbero y hora en el tablero — te esperamos con el número puesto y la toalla caliente lista.</p>
+            <div data-reveal style="display:flex;flex-wrap:wrap;gap:0;margin-top:30px;border:3px solid #14110e;width:fit-content">
+              <a href="#tablero" style="background:#14110e;color:#ede4d3;padding:18px 30px;font-family:Oswald,sans-serif;font-weight:600;font-size:15px;letter-spacing:0.16em;text-transform:uppercase">Pedir turno</a>
+              <a href="#carta" style="padding:18px 30px;font-family:Oswald,sans-serif;font-weight:600;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;border-left:3px solid #14110e">Ver servicios</a>
+            </div>
+          </div>
+          <div data-hero-photo style="position:relative;background:#14110e;min-height:78vh;min-width:0">
+            <div style="position:absolute;inset:0"><img src="./img/brava-corte.jpg" alt="Barbero trabajando en BRAVA" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="position:absolute;left:0;right:0;bottom:0;background:#d98324;color:#14110e;padding:16px 22px;font-family:Oswald,sans-serif;font-weight:600;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;pointer-events:none">Mar a sáb · 9:00 — 19:00</div>
+          </div>
+        </div>
+      </section>
+
+      <section style="background:#14110e;color:#ede4d3;border-bottom:4px solid #14110e">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+            <div data-reveal style="padding:26px 24px;border-right:1px solid rgba(237,228,211,0.2)">
+              <div style="font-family:Oswald,sans-serif;font-weight:700;font-size:52px;line-height:0.9;color:#d98324">{{ s.n }}</div>
+              <div style="font-size:14px;line-height:1.4;color:rgba(237,228,211,0.7);margin-top:8px">{{ s.l }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section id="carta" data-pad style="padding:56px 40px;border-bottom:4px solid #14110e">
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;border-bottom:3px solid #14110e;padding-bottom:14px">
+          <h2 data-reveal style="font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(38px,7vw,84px);line-height:0.85">El oficio</h2>
+          <p data-reveal style="max-width:34ch;font-size:16px;line-height:1.55">Todo servicio incluye lavado, toalla caliente y tónico.</p>
+        </div>
+        <sc-for list="{{ servicios }}" as="sv" hint-placeholder-count="4">
+          <div data-reveal data-hover-row style="display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:24px 0;border-bottom:1px solid rgba(20,17,14,0.28);transition:background .3s ease,padding .3s ease">
+            <div style="font-family:Oswald,sans-serif;font-weight:700;font-size:26px;color:#a83916">{{ sv.num }}</div>
+            <div>
+              <div style="font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(24px,3.6vw,42px);line-height:1">{{ sv.nombre }}</div>
+              <div style="font-size:16px;margin-top:6px;color:rgba(20,17,14,0.72)">{{ sv.detalle }}</div>
+            </div>
+            <div style="text-align:right;white-space:nowrap">
+              <div style="font-family:Oswald,sans-serif;font-weight:700;font-size:30px">{{ sv.precio }}</div>
+              <div style="font-family:Oswald,sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(20,17,14,0.6)">{{ sv.min }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </section>
+
+      <section id="manos" style="border-bottom:4px solid #14110e">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+          <sc-for list="{{ barberos }}" as="b" hint-placeholder-count="3">
+            <div data-reveal data-split="line" style="border-right:2px solid #14110e;min-width:0">
+              <div style="aspect-ratio:3/4;background:#14110e"><img src="{{ b.foto }}" alt="{{ b.nombre }}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+              <div style="padding:22px 24px 30px">
+                <div style="font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:34px;line-height:1">{{ b.nombre }}</div>
+                <div style="font-family:Oswald,sans-serif;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#a83916;margin-top:6px">{{ b.especialidad }}</div>
+                <div style="font-size:16px;line-height:1.55;margin-top:14px">{{ b.nota }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <section id="tablero" style="background:#14110e;color:#ede4d3;padding:56px 40px;border-bottom:4px solid #14110e">
+        <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between;margin-bottom:8px">
+          <h2 data-reveal style="font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(38px,7vw,88px);line-height:0.85">Tablero<br><span style="color:#d98324">de turnos</span></h2>
+          <div data-reveal style="display:flex;border:2px solid #ede4d3">
+            <sc-for list="{{ opDias }}" as="o" hint-placeholder-count="5">
+              <button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <p data-reveal style="font-size:16px;color:rgba(237,228,211,0.7);max-width:60ch;margin-bottom:26px">Toca la casilla libre del barbero y la hora que quieras. Confirmamos por WhatsApp con tu nombre en la lista del día.</p>
+
+        <div style="overflow-x:auto;border:2px solid rgba(237,228,211,0.4)">
+          <div style="min-width:640px">
+            <div style="display:grid;grid-template-columns:130px repeat(7,minmax(74px,1fr));background:#d98324;color:#14110e">
+              <div style="padding:12px 14px;font-family:Oswald,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.2em;text-transform:uppercase">{{ diaActual }}</div>
+              <sc-for list="{{ horas }}" as="h" hint-placeholder-count="7">
+                <div style="padding:12px 8px;text-align:center;font-family:Oswald,sans-serif;font-weight:700;font-size:13px;border-left:1px solid rgba(20,17,14,0.25)">{{ h }}</div>
+              </sc-for>
+            </div>
+            <sc-for list="{{ filas }}" as="f" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:130px repeat(7,minmax(74px,1fr));border-top:1px solid rgba(237,228,211,0.28)">
+                <div style="padding:14px;font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:17px;letter-spacing:0.06em;display:flex;align-items:center">{{ f.nombre }}</div>
+                <sc-for list="{{ f.celdas }}" as="c" hint-placeholder-count="7">
+                  <button type="button" onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px;border:2px solid #ede4d3">
+          <div data-split="line" style="padding:26px;border-right:2px solid #ede4d3;min-width:0">
+            <div style="font-family:Oswald,sans-serif;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#d98324">Tu turno</div>
+            <div style="font-family:Oswald,sans-serif;font-weight:700;font-size:clamp(26px,3.6vw,40px);text-transform:uppercase;line-height:1.05;margin-top:10px">{{ turnoTitulo }}</div>
+            <div style="font-size:16px;color:rgba(237,228,211,0.72);margin-top:10px">{{ turnoDetalle }}</div>
+          </div>
+          <div style="padding:26px;min-width:0;background:repeating-linear-gradient(90deg,rgba(237,228,211,0.06) 0 12px,transparent 12px 24px)">
+            <div style="font-family:Oswald,sans-serif;font-size:12px;letter-spacing:0.26em;text-transform:uppercase;color:#d98324">Servicio</div>
+            <div style="display:flex;flex-wrap:wrap;margin-top:12px;border:1px solid rgba(237,228,211,0.45);width:fit-content">
+              <sc-for list="{{ opServicios }}" as="o" hint-placeholder-count="4">
+                <button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-top:22px;padding-top:16px;border-top:1px dashed rgba(237,228,211,0.5);font-family:Oswald,sans-serif;font-weight:700;font-size:40px">{{ total }}</div>
+            <a href="{{ waLink }}" target="_blank" rel="noopener" style="display:inline-block;margin-top:16px;background:#d98324;color:#14110e;padding:16px 26px;font-family:Oswald,sans-serif;font-weight:700;font-size:14px;letter-spacing:0.16em;text-transform:uppercase">Confirmar por WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="local" style="padding:56px 40px;border-bottom:4px solid #14110e">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border:3px solid #14110e">
+          <div data-reveal style="min-width:0;aspect-ratio:16/10;border-right:3px solid #14110e;background:#14110e"><img src="./img/brava-local.jpg" alt="Interior de BRAVA Barbería" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div data-reveal style="background:#a83916;color:#ede4d3;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-width:0">
+            <div style="font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(30px,4vw,52px);line-height:0.92">Sin cita<br>igual<br>entras</div>
+            <div style="font-size:17px;line-height:1.55">Guardamos dos sillas al día para quien llega de paso. Efectivo, Nequi y tarjeta.</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border:3px solid #14110e;border-top:0">
+          <sc-for list="{{ resenas }}" as="r" hint-placeholder-count="3">
+            <div data-reveal data-split="line" style="padding:28px;border-right:1px solid rgba(20,17,14,0.3);min-width:0">
+              <div style="font-family:Oswald,sans-serif;font-weight:300;font-size:19px;line-height:1.45">“{{ r.texto }}”</div>
+              <div style="font-family:Oswald,sans-serif;font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:#a83916;margin-top:16px">{{ r.autor }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <footer style="background:#14110e;color:#ede4d3;padding:44px 40px">
+        <div style="font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(48px,13vw,170px);line-height:0.8">BRAVA</div>
+        <div style="display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;margin-top:28px;padding-top:18px;border-top:1px solid rgba(237,228,211,0.3);font-family:Oswald,sans-serif;font-size:13px;letter-spacing:0.16em;text-transform:uppercase">
+          <span>Cra. 45 #72-18 · Barranquilla</span>
+          <span>+57 300 000 0000</span>
+          <a href="Catalogo.dc.html" style="color:#d98324">← Volver al portafolio</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;margin-top:20px;padding-top:18px;border-top:1px solid rgba(237,228,211,0.3)">
+          <span style="font-family:Oswald,sans-serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#d98324">@bravabarberia</span>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a href="https://instagram.com/bravabarberia" target="_blank" rel="noopener" aria-label="Instagram" style="width:46px;height:46px;border:2px solid #ede4d3;color:#ede4d3;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"></circle></svg></a>
+            <a href="https://tiktok.com/@bravabarberia" target="_blank" rel="noopener" aria-label="TikTok" style="width:46px;height:46px;border:2px solid #ede4d3;color:#ede4d3;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M16.5 3h-2.6v12.2a2.3 2.3 0 1 1-2-2.3v-2.7a5 5 0 1 0 4.6 5V9.4c1 .7 2.2 1.1 3.5 1.1V7.9c-1.9-.2-3.2-1.5-3.5-3.4z"></path></svg></a>
+            <a href="https://facebook.com/bravabarberia" target="_blank" rel="noopener" aria-label="Facebook" style="width:46px;height:46px;border:2px solid #ede4d3;color:#ede4d3;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5h1.3V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.9V11H8.1v3h2.4v7z"></path></svg></a>
+            <a href="https://x.com/bravabarberia" target="_blank" rel="noopener" aria-label="X" style="width:46px;height:46px;border:2px solid #ede4d3;color:#ede4d3;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M4 3h4.3l3.9 5.2L16.9 3H21l-6.3 7.6L21.4 21h-4.3l-4.2-5.6L8 21H4l6.6-7.9z"></path></svg></a>
+            <a href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="WhatsApp" style="width:46px;height:46px;background:#d98324;color:#14110e;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 2a7 7 0 1 1-3.6 13l-.3-.2-2.2.6.6-2.2-.2-.3A7 7 0 0 1 12 5zm-2.6 3.4c-.2 0-.5.1-.7.3-.3.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.5 1.9.7 2.3.6 2.7.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.4l-.7-1.7c-.2-.4-.4-.3-.5-.3z"></path></svg></a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+const SERVICIOS = [
+  {num:'01', nombre:'Corte clásico', detalle:'Tijera y máquina, contorno a navaja', min:'45 min', precio:'$28.000'},
+  {num:'02', nombre:'Corte + barba', detalle:'El completo: perfilado y toalla caliente', min:'70 min', precio:'$42.000'},
+  {num:'03', nombre:'Afeitado a navaja', detalle:'Vapor, dos pasadas, bálsamo frío', min:'40 min', precio:'$32.000'},
+  {num:'04', nombre:'Niños', detalle:'Hasta 11 años, con paciencia incluida', min:'30 min', precio:'$20.000'}
+];
+const BARBEROS = [
+  {nombre:'Iván', foto:'./img/brava-ivan.jpg', especialidad:'Degradados y líneas', nota:'Trece años detrás de la silla. Si quieres un fade limpio, es él.'},
+  {nombre:'Chelo', foto:'./img/brava-chelo.jpg', especialidad:'Barba y navaja', nota:'Perfila barbas difíciles y no le tiembla la mano con la navaja.'},
+  {nombre:'Rubén', foto:'./img/brava-ruben.jpg', especialidad:'Corte a tijera', nota:'Manda en el corte clásico y en el pelo con textura.'}
+];
+const HORAS = ['9:00','10:30','12:00','14:00','15:30','17:00','18:00'];
+const DIAS = ['Martes','Miércoles','Jueves','Viernes','Sábado'];
+const OCUPADO = {
+  Martes: ['0-2','1-0','2-5'], Miércoles: ['0-0','0-1','2-3'], Jueves: ['1-4','2-1','0-6'],
+  Viernes: ['0-3','1-1','1-2','2-6'], Sábado: ['0-0','1-3','2-2','2-4','0-5']
+};
+
+class Component extends DCLogic {
+  state = { dia: 'Martes', barbero: 0, hora: 3, servicio: 1 };
+
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(26px)'; el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)'; });
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const sweep = () => els.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el); });
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { this.ioFired = true; show(e.target); this.io.unobserve(e.target); }
+    }), { threshold: 0.05 });
+    els.forEach(el => this.io.observe(el));
+    requestAnimationFrame(sweep);
+    window.addEventListener('scroll', sweep, { passive: true });
+    setTimeout(() => { if (!this.ioFired) { this.io.disconnect(); sweep(); } }, 900);
+    document.querySelectorAll('[data-hover-row]').forEach(el => {
+      el.addEventListener('mouseenter', () => { el.style.background = 'rgba(168,57,22,0.1)'; el.style.paddingLeft = '10px'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; el.style.paddingLeft = '0'; });
+    });
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+
+  tabDia(active) {
+    return 'padding:12px 18px;font-family:Oswald,sans-serif;font-weight:600;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:all .2s ease;border-right:1px solid rgba(237,228,211,0.35);' +
+      (active ? 'background:#ede4d3;color:#14110e' : 'background:transparent;color:rgba(237,228,211,0.75)');
+  }
+  tabServ(active) {
+    return 'padding:11px 15px;font-family:Oswald,sans-serif;font-weight:600;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;transition:all .2s ease;border-right:1px solid rgba(237,228,211,0.35);' +
+      (active ? 'background:#d98324;color:#14110e' : 'background:transparent;color:rgba(237,228,211,0.72)');
+  }
+
+  renderVals() {
+    const s = this.state;
+    const ocupado = OCUPADO[s.dia] || [];
+    const sv = SERVICIOS[s.servicio], b = BARBEROS[s.barbero], h = HORAS[s.hora];
+    const libre = ocupado.indexOf(s.barbero + '-' + s.hora) === -1;
+    const msg = 'Hola BRAVA, quiero el turno del ' + s.dia + ' a las ' + h + ' con ' + b.nombre + ' — ' + sv.nombre + '.';
+    return {
+      stats: [{n:'13', l:'años en la misma esquina'}, {n:'4.9', l:'promedio en Google (312 reseñas)'}, {n:'8 min', l:'espera promedio con turno'}, {n:'3', l:'barberos de planta'}],
+      servicios: SERVICIOS,
+      barberos: BARBEROS,
+      horas: HORAS,
+      diaActual: s.dia,
+      opDias: DIAS.map(d => ({ label: d.slice(0, 3), style: this.tabDia(d === s.dia), pick: () => this.setState({ dia: d }) })),
+      opServicios: SERVICIOS.map((x, i) => ({ label: x.nombre, style: this.tabServ(i === s.servicio), pick: () => this.setState({ servicio: i }) })),
+      filas: BARBEROS.map((bb, bi) => ({
+        nombre: bb.nombre,
+        celdas: HORAS.map((hh, hi) => {
+          const key = bi + '-' + hi;
+          const taken = ocupado.indexOf(key) > -1;
+          const sel = !taken && bi === s.barbero && hi === s.hora;
+          return {
+            label: taken ? '×' : (sel ? '✓' : 'libre'),
+            style: 'padding:16px 6px;font-family:Oswald,sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;border-left:1px solid rgba(237,228,211,0.28);transition:all .18s ease;' +
+              (taken ? 'background:rgba(237,228,211,0.07);color:rgba(237,228,211,0.3);cursor:not-allowed'
+                     : sel ? 'background:#d98324;color:#14110e' : 'background:transparent;color:rgba(237,228,211,0.6)'),
+            pick: taken ? () => {} : () => this.setState({ barbero: bi, hora: hi })
+          };
+        })
+      })),
+      turnoTitulo: libre ? s.dia + ' · ' + h : 'Escoge una casilla libre',
+      total: sv.precio,
+      turnoDetalle: libre ? b.nombre + ' — ' + sv.nombre + ' · ' + sv.min + '. Llega cinco minutos antes.' : 'Las casillas con × ya están tomadas ese día.',
+      waLink: 'https://wa.me/573000000000?text=' + encodeURIComponent(msg),
+      resenas: [
+        {texto:'Llegué con un fade mal hecho de otro lado y lo arreglaron sin cobrarme extra. Ya llevo dos años yendo.', autor:'Andrés M.'},
+        {texto:'Pedí el turno por WhatsApp un martes y entré a la hora exacta. En Barranquilla eso vale oro.', autor:'Julián R.'},
+        {texto:'El afeitado a navaja con Chelo es otra cosa. Salí como nuevo y sin una sola irritación.', autor:'Camilo P.'}
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
