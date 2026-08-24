@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>LYVweb · Páginas web que hacen que tu negocio se vea diferente</title>
+<meta name="description" content="LYVweb diseña páginas web a medida: sitios para mostrar tus servicios, tiendas, reservas, automatizaciones, chatbots, CRM e inteligencia artificial integrada.">
+<meta name="theme-color" content="#06070d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:#06070d;color:#e8ecf5;font-family:'Manrope',system-ui,sans-serif;overflow-x:hidden}
+  a{color:#2ee6ff;text-decoration:none}
+  a:hover{color:#b57cff}
+  ::selection{background:#2ee6ff;color:#06070d}
+  @media(max-width:760px){
+    article a[href$=".dc.html"],article a[href^="https://wa.me"]{display:inline-block !important;padding-top:11px !important;padding-bottom:11px !important}
+    article a[href$=".dc.html"] + a,article a[href^="https://wa.me"]{margin-left:0}
+  }
+</style>
+</helmet>
+
+<div style="position:relative;overflow:hidden;background:#06070d">
+
+  <div style="position:absolute;top:-320px;left:50%;transform:translateX(-50%);width:1100px;height:800px;background:radial-gradient(closest-side,rgba(46,230,255,0.16),rgba(139,92,246,0.10) 45%,rgba(6,7,13,0) 72%);pointer-events:none"></div>
+
+  <div style="position:relative;border-bottom:1px solid rgba(255,255,255,0.09);backdrop-filter:blur(6px)">
+    <div style="max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center">
+      <div style="display:flex;align-items:center;gap:13px">
+        <img src="./img/lyvweb-logo.png" alt="LYVweb" style="width:44px;height:44px;border-radius:999px;display:block">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.16em;line-height:1">LYVWEB</span>
+          <span style="font-size:9.5px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(232,236,245,0.5)">Diseño y desarrollo web · Barranquilla</span>
+        </div>
+      </div>
+      <a href="{{ waGeneral }}" target="_blank" rel="noopener" style="font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;border:1px solid rgba(46,230,255,0.4);border-radius:999px;padding:10px 20px;color:#2ee6ff">Hablemos →</a>
+    </div>
+  </div>
+
+  <section style="position:relative;max-width:1280px;margin:0 auto;padding:84px 28px 0">
+    <div data-reveal="" style="display:inline-flex;align-items:center;gap:9px;font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(232,236,245,0.6);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:8px 16px">
+      <span style="width:6px;height:6px;border-radius:999px;background:#2ee6ff;display:block"></span>Portafolio 2026
+    </div>
+    <h1 data-reveal="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,7vw,104px);line-height:0.98;letter-spacing:-0.035em;max-width:17ch;margin-top:22px">Páginas web que hacen que tu negocio <span style="background:linear-gradient(100deg,#2ee6ff,#4d7cff 45%,#c04dff);-webkit-background-clip:text;background-clip:text;color:transparent">se vea diferente</span>.</h1>
+    <p data-reveal="" style="font-size:19px;line-height:1.7;color:rgba(232,236,245,0.65);max-width:62ch;margin-top:26px;text-wrap:pretty">Diseñamos páginas web a medida para negocios y emprendimientos: desde una web sencilla para mostrar tus servicios y recibir contactos, hasta plataformas completas con reservas, catálogos, tiendas, automatizaciones, chatbots, CRM e inteligencia artificial integrada.</p>
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:30px">
+      <a href="{{ waGeneral }}" target="_blank" rel="noopener" style="background:linear-gradient(100deg,#22d3ee,#4d7cff 50%,#a855f7);color:#06070d;padding:16px 30px;border-radius:999px;font-size:15px;font-weight:700">Cotizar mi página web</a>
+      <a href="#ejemplos" style="border:1px solid rgba(255,255,255,0.2);color:#e8ecf5;padding:15px 28px;border-radius:999px;font-size:15px;font-weight:600">Ver ejemplos</a>
+    </div>
+  </section>
+
+  <section id="servicios" style="position:relative;max-width:1280px;margin:0 auto;padding:78px 28px 0">
+    <h2 data-reveal="" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,4.4vw,54px);line-height:1.02;letter-spacing:-0.03em">Más que páginas web</h2>
+    <div data-reveal="" style="height:1px;background:linear-gradient(90deg,#2ee6ff,#4d7cff 45%,#c04dff);margin-top:22px"></div>
+    <div>
+      <sc-for list="{{ servicios }}" as="s" hint-placeholder-count="8">
+        <div data-hover-row="" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:18px;align-items:baseline;padding:16px 12px;border-bottom:1px solid rgba(255,255,255,0.09);transition:background .25s ease">
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.1em;color:#2ee6ff">{{ s.n }}</span>
+          <span style="font-size:17px;line-height:1.45;color:rgba(232,236,245,0.88)">{{ s.t }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <div id="ejemplos" style="max-width:1280px;margin:0 auto;padding:72px 28px 0">
+    <div data-reveal="" style="font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(232,236,245,0.5)">Ejemplos de diseño</div>
+  </div>
+
+  <article id="brava" style="max-width:1280px;margin:0 auto;padding:26px 28px 0">
+    <div data-reveal="" style="border:1px solid rgba(255,255,255,0.1);border-radius:28px;overflow:hidden;background:#0b0d16;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:stretch">
+      <div style="padding:clamp(28px,3.6vw,48px);min-width:0;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#d98324">Barbería</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(38px,5.4vw,72px);line-height:1;letter-spacing:-0.02em;margin-top:12px">BRAVA</div>
+        <p style="font-size:19px;line-height:1.6;color:rgba(232,236,245,0.62);margin-top:16px;max-width:34ch">Un cartel urbano donde pedir turno toma diez segundos.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:24px">
+          <a href="Barberia.dc.html" style="color:#e8ecf5;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #d98324;padding-bottom:6px">Ver ejemplo →</a>
+          <a href="{{ waBarberia }}" target="_blank" rel="noopener" style="color:rgba(232,236,245,0.55);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(232,236,245,0.25);padding-bottom:6px">Quiero una así</a>
+        </div>
+      </div>
+      <div style="min-width:0;min-height:clamp(300px,40vw,520px)"><img src="./img/brava-equipo.png" alt="Barbería BRAVA en acción" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+  </article>
+
+  <article id="marisma" style="max-width:1280px;margin:0 auto;padding:24px 28px 0">
+    <div data-reveal="" style="border:1px solid rgba(255,255,255,0.1);border-radius:28px;overflow:hidden;background:#0b0d16">
+      <div style="height:clamp(280px,42vw,500px)"><img src="./img/rest-salmon.png" alt="Plato servido en el restaurante" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;align-items:end;padding:clamp(26px,3.4vw,44px)">
+        <div>
+          <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#c2a161">Restaurante gourmet</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(36px,5vw,66px);line-height:1;letter-spacing:0.02em;margin-top:10px">MARISMA</div>
+        </div>
+        <div>
+          <p style="font-size:19px;line-height:1.6;color:rgba(232,236,245,0.62);max-width:40ch">Cocina de autor: menú degustación, carta de temporada y reserva de mesa.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:16px">
+            <a href="Restaurante.dc.html" style="color:#e8ecf5;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #c2a161;padding-bottom:6px">Ver ejemplo →</a>
+            <a href="{{ waRestaurante }}" target="_blank" rel="noopener" style="color:rgba(232,236,245,0.55);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(232,236,245,0.25);padding-bottom:6px">Quiero una así</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article id="altivo" style="max-width:1280px;margin:0 auto;padding:24px 28px 0">
+    <div data-reveal="" style="border:1px solid rgba(255,255,255,0.1);border-radius:28px;overflow:hidden;background:#0b0d16;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <div style="padding:clamp(28px,3.6vw,44px);min-width:0;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#5fd0a6">Inmobiliaria</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(34px,4.6vw,62px);letter-spacing:0.14em;line-height:1;margin-top:10px">ALTIVO</div>
+        <p style="font-size:19px;line-height:1.6;color:rgba(232,236,245,0.62);margin-top:16px;max-width:32ch">Inmuebles como en una revista de arquitectura, con búsqueda real.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:20px">
+          <a href="Inmobiliaria.dc.html" style="color:#e8ecf5;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #5fd0a6;padding-bottom:6px">Ver ejemplo →</a>
+          <a href="{{ waInmobiliaria }}" target="_blank" rel="noopener" style="color:rgba(232,236,245,0.55);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(232,236,245,0.25);padding-bottom:6px">Quiero una así</a>
+        </div>
+      </div>
+      <div style="min-width:0;min-height:clamp(240px,30vw,400px)"><img src="./img/alt-fachada.png" alt="Fachada del edificio ALTIVO" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="min-width:0;min-height:clamp(240px,30vw,400px)"><img src="./img/alt-sala-blanca.png" alt="Sala luminosa" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+  </article>
+
+  <article id="tempo" style="max-width:1280px;margin:0 auto;padding:24px 28px 0">
+    <div data-reveal="" style="border:1px solid rgba(255,255,255,0.1);border-radius:28px;overflow:hidden;background:#0b0d16;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:stretch">
+      <div style="min-width:0;min-height:clamp(260px,32vw,430px)"><img src="./img/tempo-clase.png" alt="Entrenamiento en grupo en TEMPO" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="padding:clamp(28px,3.6vw,48px);min-width:0;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#ff7a5c">Estudio fitness</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(38px,5.4vw,70px);letter-spacing:-0.04em;line-height:1;margin-top:10px">TEMPO</div>
+        <p style="font-size:19px;line-height:1.6;color:rgba(232,236,245,0.62);margin-top:16px;max-width:36ch">Un calendario vivo donde el cupo se reserva de un toque.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:20px">
+          <a href="Fitness.dc.html" style="color:#e8ecf5;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #ff7a5c;padding-bottom:6px">Ver ejemplo →</a>
+          <a href="{{ waFitness }}" target="_blank" rel="noopener" style="color:rgba(232,236,245,0.55);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(232,236,245,0.25);padding-bottom:6px">Quiero una así</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article id="orden" style="max-width:1280px;margin:0 auto;padding:24px 28px 0">
+    <div data-reveal="" style="border:1px solid rgba(255,255,255,0.1);border-radius:28px;overflow:hidden;background:#0b0d16;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+      <div style="padding:clamp(28px,3.6vw,48px);min-width:0;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:#6f9dff">Consultora de CRM y automatización</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(34px,4.6vw,62px);letter-spacing:-0.035em;line-height:1;margin-top:10px">ÓRDEN</div>
+        <p style="font-size:19px;line-height:1.6;color:rgba(232,236,245,0.62);margin-top:16px;max-width:34ch">Un sitio serio y ordenado que transmite método antes de la primera llamada.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:20px">
+          <a href="Consultora.dc.html" style="color:#e8ecf5;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid #6f9dff;padding-bottom:6px">Ver ejemplo →</a>
+          <a href="{{ waConsultora }}" target="_blank" rel="noopener" style="color:rgba(232,236,245,0.55);font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(232,236,245,0.25);padding-bottom:6px">Quiero una así</a>
+        </div>
+      </div>
+      <div style="min-width:0;min-height:clamp(260px,32vw,420px)"><img src="./img/orden-reunion.png" alt="Equipo de ORDEN en reunión" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+  </article>
+
+  <article id="vector" style="max-width:1280px;margin:0 auto;padding:24px 28px 0">
+    <div data-reveal="" style="border:1px solid rgba(255,255,255,0.1);border-radius:28px;overflow:hidden;background:#0b0d16">
+      <div style="height:clamp(240px,32vw,430px)"><img src="./img/vector-oficina.png" alt="Oficina de VECTOR AI" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;align-items:end;padding:clamp(26px,3.4vw,44px)">
+        <div>
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8b6cff">Agencia de IA, automatizaciones y chatbots</div>
+          <div style="font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:clamp(32px,4.4vw,60px);letter-spacing:0.06em;line-height:1;margin-top:12px">VECTOR<span style="color:#8b6cff">/ai</span></div>
+        </div>
+        <div>
+          <p style="font-size:19px;line-height:1.6;color:rgba(232,236,245,0.62);max-width:38ch">Una interfaz de sistema donde el cliente arma su propio agente y ve el estimado.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:16px;font-family:ui-monospace,Menlo,monospace;font-size:12.5px">
+            <a href="AgenciaIA.dc.html" style="color:#e8ecf5;border-bottom:1px solid #8b6cff;padding-bottom:5px">[ ver ejemplo ]</a>
+            <a href="{{ waAgencia }}" target="_blank" rel="noopener" style="color:rgba(232,236,245,0.55);border-bottom:1px solid rgba(232,236,245,0.25);padding-bottom:5px">[ quiero una así ]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section id="clientes" style="max-width:1280px;margin:0 auto;padding:84px 28px 0">
+    <div data-reveal="" style="font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(232,236,245,0.5)">Clientes</div>
+    <h2 data-reveal="" style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,5vw,62px);line-height:1.02;letter-spacing:-0.03em;margin-top:12px;max-width:20ch">Páginas que ya hemos hecho</h2>
+    <p data-reveal="" style="font-size:18px;line-height:1.7;color:rgba(232,236,245,0.62);max-width:48ch;margin-top:14px">Sitios en línea, funcionando hoy para negocios reales.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:32px">
+      <sc-for list="{{ clientes }}" as="c" hint-placeholder-count="2">
+        <a href="{{ c.url }}" target="_blank" rel="noopener" data-hover-card="" data-reveal="" style="display:block;border:1px solid rgba(255,255,255,0.12);border-radius:22px;overflow:hidden;background:#0b0d16;transition:transform .35s ease,border-color .35s ease">
+          <div style="height:clamp(200px,26vw,320px)"><img src="{{ c.foto }}" alt="{{ c.nombre }}" style="width:100%;height:100%;object-fit:contain;background:#fff;display:block"></div>
+          <div style="padding:24px">
+            <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:baseline">
+              <span style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:600;letter-spacing:-0.01em;color:#e8ecf5">{{ c.nombre }}</span>
+              <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,236,245,0.45)">{{ c.sector }}</span>
+            </div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(232,236,245,0.62);margin-top:8px">{{ c.desc }}</div>
+            <div style="margin-top:18px;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;color:#2ee6ff">Visitar el sitio →</div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="contacto" style="position:relative;max-width:1280px;margin:0 auto;padding:88px 28px 60px">
+    <div data-reveal="" style="height:1px;background:linear-gradient(90deg,#2ee6ff,#4d7cff 45%,#c04dff)"></div>
+    <div data-reveal="" style="padding-top:38px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:end">
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(32px,5.4vw,74px);line-height:1;letter-spacing:-0.035em;max-width:18ch">Tu negocio no tiene que verse como todos los demás.</h2>
+      <div>
+        <p style="font-size:18px;line-height:1.7;color:rgba(232,236,245,0.65);max-width:40ch">Creamos una página que se vea, se sienta y funcione como tu marca.</p>
+        <a href="{{ waCierre }}" target="_blank" rel="noopener" style="display:inline-block;margin-top:26px;background:linear-gradient(100deg,#22d3ee,#4d7cff 50%,#a855f7);color:#06070d;padding:17px 32px;border-radius:999px;font-size:15px;font-weight:700">Hablemos de tu página web</a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;margin-top:56px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.09)">
+      <div style="display:flex;align-items:center;gap:13px">
+        <img src="./img/lyvweb-logo.png" alt="LYVweb" style="width:40px;height:40px;border-radius:999px;display:block">
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <span style="font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(232,236,245,0.5)">LYVweb · Barranquilla, Colombia · +57 300 491 6552</span>
+          <a href="mailto:lyvwebcol@gmail.com" style="font-size:13px;letter-spacing:0.04em;color:#2ee6ff">lyvwebcol@gmail.com</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://instagram.com/lyvweb" target="_blank" rel="noopener" aria-label="Instagram" style="width:46px;height:46px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);color:#e8ecf5;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+        
+        
+        
+        <a href="mailto:lyvwebcol@gmail.com" aria-label="Correo" style="width:46px;height:46px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);color:#e8ecf5;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="m4 7 8 6 8-6"></path></svg></a>
+        <a href="{{ waGeneral }}" target="_blank" rel="noopener" aria-label="WhatsApp" style="width:46px;height:46px;border-radius:999px;background:linear-gradient(100deg,#22d3ee,#a855f7);color:#06070d;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 2a7 7 0 1 1-3.6 13l-.3-.2-2.2.6.6-2.2-.2-.3A7 7 0 0 1 12 5zm-2.6 3.4c-.2 0-.5.1-.7.3-.3.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.5 1.9.7 2.3.6 2.7.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.4l-.7-1.7c-.2-.4-.4-.3-.5-.3z"></path></svg></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+const WA = 'https://wa.me/573004916552?text=';
+const KEY = 'portafolio-scroll';
+
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1)'; });
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const sweep = () => els.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el); });
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { this.ioFired = true; show(e.target); this.io.unobserve(e.target); }
+    }), { threshold: 0.05 });
+    els.forEach(el => this.io.observe(el));
+    requestAnimationFrame(sweep);
+    window.addEventListener('scroll', sweep, { passive: true });
+    setTimeout(() => { if (!this.ioFired) { this.io.disconnect(); sweep(); } }, 900);
+
+    document.querySelectorAll('[data-hover-row]').forEach(el => {
+      el.addEventListener('mouseenter', () => { el.style.background = 'rgba(46,230,255,0.07)'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; });
+    });
+    document.querySelectorAll('[data-hover-card]').forEach(el => {
+      el.addEventListener('mouseenter', () => { el.style.transform = 'translateY(-8px)'; el.style.borderColor = 'rgba(46,230,255,0.55)'; });
+      el.addEventListener('mouseleave', () => { el.style.transform = 'none'; el.style.borderColor = 'rgba(255,255,255,0.12)'; });
+    });
+
+    this.save = () => { try { sessionStorage.setItem(KEY, String(window.scrollY)); } catch (e) {} };
+    this.onClick = e => {
+      const a = e.target.closest && e.target.closest('a[href$=".dc.html"]');
+      if (a) this.save();
+    };
+    document.addEventListener('click', this.onClick, true);
+    window.addEventListener('pagehide', this.save);
+    window.addEventListener('beforeunload', this.save);
+
+    let y = 0;
+    try { y = parseInt(sessionStorage.getItem(KEY) || '0', 10); } catch (e) {}
+    if (y > 0 && !location.hash) {
+      const root = document.documentElement;
+      const prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      const restore = () => window.scrollTo(0, y);
+      requestAnimationFrame(restore);
+      setTimeout(restore, 120);
+      setTimeout(restore, 420);
+      setTimeout(() => { root.style.scrollBehavior = prev; }, 600);
+    }
+  }
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    document.removeEventListener('click', this.onClick, true);
+    window.removeEventListener('pagehide', this.save);
+    window.removeEventListener('beforeunload', this.save);
+  }
+
+  wa(tipo) {
+    return WA + encodeURIComponent('Hola, vi el ejemplo de ' + tipo + ' en LYVweb y quiero una página web parecida para mi negocio.');
+  }
+
+  renderVals() {
+    return {
+      waGeneral: WA + encodeURIComponent('Hola, vi el portafolio de LYVweb y quiero cotizar una página web para mi negocio.'),
+      waCierre: WA + encodeURIComponent('Hola LYVweb, quiero hablar sobre una página web para mi empresa.'),
+      waBarberia: this.wa('barbería'),
+      waRestaurante: this.wa('restaurante gourmet'),
+      waInmobiliaria: this.wa('inmobiliaria'),
+      waFitness: this.wa('estudio fitness'),
+      waConsultora: this.wa('consultora de CRM'),
+      waAgencia: this.wa('agencia de IA'),
+      servicios: [
+        {n:'01', t:'Diseño y desarrollo de páginas web'},
+        {n:'02', t:'Tiendas virtuales y catálogos'},
+        {n:'03', t:'Reservas, formularios y conexión a WhatsApp'},
+        {n:'04', t:'Automatizaciones de procesos'},
+        {n:'05', t:'Chatbots para atención al cliente'},
+        {n:'06', t:'CRM y organización de ventas'},
+        {n:'07', t:'Implementación e integración de inteligencia artificial'},
+        {n:'08', t:'Soluciones digitales a medida para empresas, negocios y emprendimientos'}
+      ],
+      clientes: [
+        {nombre:'hdcocinas.com', url:'https://hdcocinas.com', sector:'Cocinas', foto:'./img/hdcocinas.jpeg', desc:'Sitio para mostrar el trabajo, el catálogo y recibir solicitudes de cotización.'},
+        {nombre:'ballfut.com', url:'https://ballfut.com', sector:'Deporte', foto:'./img/ballfut.jpeg', desc:'Plataforma en línea para su comunidad, con contenido y contacto directo.'}
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
