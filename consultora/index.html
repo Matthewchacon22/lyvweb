@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>ÓRDEN | CRM y automatización comercial</title>
+<meta name="description" content="Implementamos tu CRM y automatizamos el seguimiento comercial para que tu equipo deje de perder clientes. Diagnóstico gratuito.">
+<meta name="theme-color" content="#ffffff">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:#fff;color:#101114;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{color:#0b3fd6;text-decoration:none}
+  a:hover{color:#08308f}
+  ::selection{background:#0b3fd6;color:#fff}
+  button{font-family:inherit;cursor:pointer;border:0;background:transparent}
+  @media(max-width:760px){
+    [data-split]{border-right:0 !important}
+    [data-split="pad"]{padding-left:26px !important;padding-right:26px !important}
+    [data-split="tight"]{padding-right:0 !important}
+  }
+  @media(max-width:760px){
+    [data-col]{grid-column:span 12 !important}
+    [data-scrollx]{overflow-x:auto}
+    [data-crm-row]{min-width:430px}
+    [data-stack3]{grid-template-columns:1fr !important;gap:6px !important}
+    header nav a,nav a{padding:13px 0 !important;display:inline-block !important}
+  }
+</style>
+</helmet>
+
+<div style="overflow:hidden;background:#fff">
+
+  <div style="border-bottom:1px solid #101114">
+    <div style="max-width:1280px;margin:0 auto;padding:12px 28px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;font-size:11px;letter-spacing:0.1em;text-transform:uppercase">
+      <span style="font-weight:700">ÓRDEN — Operaciones comerciales</span>
+      <span style="color:rgba(16,17,20,0.55)">Barranquilla</span>
+      <a href="#contacto">Diagnóstico gratuito</a>
+    </div>
+  </div>
+
+  <header style="max-width:1280px;margin:0 auto;padding:0 28px">
+    <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding:56px 0 30px;border-bottom:1px solid #101114">
+      <div data-col style="grid-column:span 7;min-width:0">
+        <h1 data-reveal style="font-size:clamp(30px,4.6vw,60px);font-weight:700;letter-spacing:-0.035em;line-height:1.06;max-width:26ch">Tu equipo no necesita más leads. Necesita dejar de perderlos.</h1>
+      </div>
+      <div data-col style="grid-column:span 5;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;gap:18px">
+        <p data-reveal style="font-size:15.5px;line-height:1.62;color:rgba(16,17,20,0.78);text-wrap:pretty">Implementamos el CRM y automatizamos el seguimiento, para que las ventas no dependan de la memoria de una sola persona.</p>
+        <div data-reveal style="display:flex;flex-wrap:wrap;gap:22px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase">
+          <a href="#contacto" style="border-bottom:1px solid #0b3fd6;padding-bottom:4px">Agendar diagnóstico</a>
+          <a href="#muestra" style="color:rgba(16,17,20,0.6);border-bottom:1px solid rgba(16,17,20,0.3);padding-bottom:4px">Ver el panel</a>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal style="height:clamp(220px,32vw,400px);margin-top:28px"><img src="../img/orden-reunion.jpg" alt="Equipo de ORDEN en reunión" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-bottom:1px solid rgba(16,17,20,0.35);margin-top:28px">
+      <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+        <div data-reveal style="padding:22px 20px 22px 0;border-right:1px solid rgba(16,17,20,0.18)">
+          <div style="font-size:clamp(24px,2.8vw,34px);font-weight:700;letter-spacing:-0.03em">{{ k.n }}</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(16,17,20,0.6);margin-top:6px;max-width:22ch">{{ k.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </header>
+
+  <section id="dolor" style="max-width:1280px;margin:0 auto;padding:52px 28px 0">
+    <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px">
+      <div data-col style="grid-column:span 3;min-width:0">
+        <h2 data-reveal style="font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.2">Si algo de esto le suena, el problema no es el equipo</h2>
+      </div>
+      <div data-col style="grid-column:span 9;min-width:0;border-top:1px solid #101114">
+        <sc-for list="{{ dolores }}" as="d" hint-placeholder-count="4">
+          <div data-reveal data-hover-row data-stack3 style="display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:baseline;padding:20px 6px;border-bottom:1px solid rgba(16,17,20,0.18);transition:background .25s ease">
+            <div style="font-size:12px;color:rgba(16,17,20,0.45)">{{ d.n }}</div>
+            <div style="font-size:16.5px;font-weight:700;letter-spacing:-0.015em;line-height:1.3">{{ d.t }}</div>
+            <div style="font-size:14.5px;line-height:1.6;color:rgba(16,17,20,0.7)">{{ d.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" style="max-width:1280px;margin:0 auto;padding:52px 28px 0">
+    <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px">
+      <div data-col style="grid-column:span 3;min-width:0">
+        <h2 data-reveal style="font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.2">Lo que hacemos</h2>
+      </div>
+      <div data-col style="grid-column:span 9;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:1px solid #101114">
+        <sc-for list="{{ servicios }}" as="s" hint-placeholder-count="3">
+          <div data-reveal data-split="tight" style="padding:22px 22px 26px 0;border-right:1px solid rgba(16,17,20,0.16);min-width:0">
+            <div style="font-size:18px;font-weight:700;letter-spacing:-0.02em">{{ s.t }}</div>
+            <div style="font-size:14.5px;line-height:1.65;color:rgba(16,17,20,0.7);margin-top:8px">{{ s.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="muestra" style="max-width:1280px;margin:0 auto;padding:52px 28px 0">
+    <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px">
+      <div data-col style="grid-column:span 3;min-width:0">
+        <h2 data-reveal style="font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.2">Así queda su operación</h2>
+        <p data-reveal style="font-size:14px;line-height:1.6;color:rgba(16,17,20,0.65);margin-top:14px">Extracto de una implementación real. Datos alterados por confidencialidad.</p>
+        <div data-reveal style="display:grid;gap:4px;margin-top:20px">
+          <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+            <button type="button" onClick="{{ t.pick }}" style="{{ t.style }}">{{ t.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div data-col style="grid-column:span 9;min-width:0">
+        <div data-reveal style="border:1px solid #101114">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:12px 18px;border-bottom:1px solid rgba(16,17,20,0.25);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(16,17,20,0.55)">
+            <span>Vista: {{ vistaActual }}</span><span>crm.tuempresa.co</span>
+          </div>
+          <div data-scrollx style="padding:20px 18px">
+            <sc-if value="{{ esPipeline }}" hint-placeholder-val="{{ true }}">
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+                <sc-for list="{{ etapas }}" as="e" hint-placeholder-count="4">
+                  <div data-split="tight" style="padding:0 14px 0 0;border-right:1px solid rgba(16,17,20,0.16);min-width:0">
+                    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px;border-bottom:1px solid #101114">
+                      <span style="font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase">{{ e.nombre }}</span>
+                      <span style="font-size:11px;color:rgba(16,17,20,0.55)">{{ e.total }}</span>
+                    </div>
+                    <sc-for list="{{ e.tratos }}" as="t" hint-placeholder-count="2">
+                      <div style="padding:12px 0;border-bottom:1px solid rgba(16,17,20,0.12)">
+                        <div style="font-size:14px;font-weight:500">{{ t.cliente }}</div>
+                        <div style="font-size:11.5px;color:rgba(16,17,20,0.55);margin-top:4px">{{ t.dias }}</div>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ esAutomatizacion }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <div data-crm-row style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 90px;gap:14px;padding-bottom:8px;border-bottom:1px solid #101114;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(16,17,20,0.55)">
+                  <span>Flujo</span><span>Disparador</span><span>Estado</span>
+                </div>
+                <sc-for list="{{ flujos }}" as="f" hint-placeholder-count="4">
+                  <div data-crm-row style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 90px;gap:14px;padding:14px 0;border-bottom:1px solid rgba(16,17,20,0.14);font-size:14px">
+                    <span style="font-weight:500">{{ f.nombre }}</span>
+                    <span style="color:rgba(16,17,20,0.65)">{{ f.trigger }}</span>
+                    <span style="color:#0b3fd6">Activo</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ esMetricas }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <sc-for list="{{ metricas }}" as="m" hint-placeholder-count="4">
+                  <div data-crm-row style="display:grid;grid-template-columns:minmax(0,1fr) 190px 64px;gap:18px;align-items:center;padding:15px 0;border-bottom:1px solid rgba(16,17,20,0.14)">
+                    <span style="font-size:14.5px">{{ m.nombre }}</span>
+                    <div style="height:6px;background:rgba(16,17,20,0.1)">
+                      <div style="{{ m.barra }}"></div>
+                    </div>
+                    <span style="font-size:14px;text-align:right;font-variant-numeric:tabular-nums">{{ m.valor }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados" style="max-width:1280px;margin:0 auto;padding:52px 28px 0">
+    <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px">
+      <div data-col style="grid-column:span 3;min-width:0">
+        <h2 data-reveal style="font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.2">Lo que cambió para otros equipos</h2>
+      </div>
+      <div data-col style="grid-column:span 9;min-width:0;border-top:1px solid #101114">
+        <sc-for list="{{ casos }}" as="c" hint-placeholder-count="3">
+          <div data-reveal data-stack3 style="display:grid;grid-template-columns:110px minmax(0,1fr) minmax(0,1.2fr);gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(16,17,20,0.16)">
+            <div style="font-size:26px;font-weight:700;letter-spacing:-0.03em;color:#0b3fd6">{{ c.n }}</div>
+            <div>
+              <div style="font-size:16px;font-weight:700;letter-spacing:-0.015em">{{ c.t }}</div>
+              <div style="font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(16,17,20,0.5);margin-top:6px">{{ c.quien }}</div>
+            </div>
+            <div style="font-size:14.5px;line-height:1.6;color:rgba(16,17,20,0.7)">{{ c.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="max-width:1280px;margin:0 auto;padding:52px 28px 0">
+    <div style="border-top:2px solid #101114;padding-top:28px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px">
+      <div data-col style="grid-column:span 6;min-width:0">
+        <h2 data-reveal style="font-size:clamp(24px,3.4vw,44px);font-weight:700;letter-spacing:-0.035em;line-height:1.05;max-width:22ch">Empecemos por el diagnóstico</h2>
+        <p data-reveal style="font-size:15.5px;line-height:1.62;color:rgba(16,17,20,0.72);margin-top:16px;max-width:44ch">Una sesión corta: revisamos su proceso actual y le decimos qué arreglar primero. Sin costo.</p>
+        <a data-reveal href="https://wa.me/573000000000" target="_blank" rel="noopener" style="display:inline-block;margin-top:22px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid #0b3fd6;padding-bottom:5px">Agendar por WhatsApp</a>
+      </div>
+      <div data-col style="grid-column:span 6;min-width:0">
+        <div data-reveal style="height:100%;min-height:220px"><img src="../img/orden-oficina.jpg" alt="Oficina de ORDEN" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1280px;margin:40px auto 0;padding:40px 28px;border-top:1px solid #101114">
+    <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(16,17,20,0.6)">
+      <span>ÓRDEN · Barranquilla</span>
+      <span>+57 300 000 0000</span>
+      <a href="../">← Volver al portafolio</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid rgba(16,17,20,0.2)">
+      <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(16,17,20,0.6)">@orden.crm</span>
+      <div style="display:flex">
+        <a href="https://instagram.com/orden.crm" target="_blank" rel="noopener" aria-label="Instagram" style="width:46px;height:46px;border:1px solid #101114;display:flex;align-items:center;justify-content:center;color:#101114"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="https://tiktok.com/@orden.crm" target="_blank" rel="noopener" aria-label="TikTok" style="width:46px;height:46px;border:1px solid #101114;border-left:0;display:flex;align-items:center;justify-content:center;color:#101114"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.5 3h-2.6v12.2a2.3 2.3 0 1 1-2-2.3v-2.7a5 5 0 1 0 4.6 5V9.4c1 .7 2.2 1.1 3.5 1.1V7.9c-1.9-.2-3.2-1.5-3.5-3.4z"></path></svg></a>
+        <a href="https://facebook.com/orden.crm" target="_blank" rel="noopener" aria-label="Facebook" style="width:46px;height:46px;border:1px solid #101114;border-left:0;display:flex;align-items:center;justify-content:center;color:#101114"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5h1.3V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.9V11H8.1v3h2.4v7z"></path></svg></a>
+        <a href="https://x.com/orden_crm" target="_blank" rel="noopener" aria-label="X" style="width:46px;height:46px;border:1px solid #101114;border-left:0;display:flex;align-items:center;justify-content:center;color:#101114"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M4 3h4.3l3.9 5.2L16.9 3H21l-6.3 7.6L21.4 21h-4.3l-4.2-5.6L8 21H4l6.6-7.9z"></path></svg></a>
+        <a href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="WhatsApp" style="width:46px;height:46px;border:1px solid #101114;border-left:0;background:#0b3fd6;display:flex;align-items:center;justify-content:center;color:#fff"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 2a7 7 0 1 1-3.6 13l-.3-.2-2.2.6.6-2.2-.2-.3A7 7 0 0 1 12 5zm-2.6 3.4c-.2 0-.5.1-.7.3-.3.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.5 1.9.7 2.3.6 2.7.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.4l-.7-1.7c-.2-.4-.4-.3-.5-.3z"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+const ETAPAS = [
+  {nombre:'Nuevo', total:'8 tratos', tratos:[{cliente:'Ferretería Delgado', dias:'hoy'},{cliente:'Clínica Sur', dias:'1 día'}]},
+  {nombre:'Contactado', total:'6 tratos', tratos:[{cliente:'Transportes Vega', dias:'2 días'},{cliente:'Óptica Central', dias:'3 días'}]},
+  {nombre:'Propuesta', total:'4 tratos', tratos:[{cliente:'Agro Caribe', dias:'5 días'},{cliente:'Hotel Malecón', dias:'6 días'}]},
+  {nombre:'Cierre', total:'2 tratos', tratos:[{cliente:'Distribuidora RM', dias:'8 días'}]}
+];
+const FLUJOS = [
+  {nombre:'Respuesta automática a lead nuevo', trigger:'Formulario web'},
+  {nombre:'Recordatorio de propuesta sin respuesta', trigger:'Día 3 y día 7'},
+  {nombre:'Asignación por zona', trigger:'Lead nuevo'},
+  {nombre:'Reporte de pipeline al gerente', trigger:'Lunes 7:00 a.m.'}
+];
+const METRICAS = [
+  {nombre:'Leads contactados en menos de 1 hora', valor:'94%', pct:94},
+  {nombre:'Tratos con próxima tarea agendada', valor:'88%', pct:88},
+  {nombre:'Tasa de cierre del trimestre', valor:'31%', pct:31},
+  {nombre:'Propuestas con seguimiento completo', valor:'76%', pct:76}
+];
+const VISTAS = ['Pipeline', 'Automatizaciones', 'Métricas'];
+
+class Component extends DCLogic {
+  state = { vista: 'Pipeline' };
+
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(16px)'; el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)'; });
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const sweep = () => els.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el); });
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { this.ioFired = true; show(e.target); this.io.unobserve(e.target); }
+    }), { threshold: 0.05 });
+    els.forEach(el => this.io.observe(el));
+    requestAnimationFrame(sweep);
+    window.addEventListener('scroll', sweep, { passive: true });
+    setTimeout(() => { if (!this.ioFired) { this.io.disconnect(); sweep(); } }, 900);
+    document.querySelectorAll('[data-hover-row]').forEach(el => {
+      el.addEventListener('mouseenter', () => { el.style.background = 'rgba(11,63,214,0.05)'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; });
+    });
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+
+  tab(active) {
+    return 'text-align:left;padding:11px 14px;font-size:13.5px;transition:all .2s ease;border:1px solid ' +
+      (active ? '#101114;background:#101114;color:#fff' : 'rgba(16,17,20,0.25);color:rgba(16,17,20,0.7)');
+  }
+
+  renderVals() {
+    const v = this.state.vista;
+    return {
+      kpis: [
+        {n:'+38%', l:'leads contactados el mismo día'},
+        {n:'0', l:'hojas de cálculo paralelas al final'},
+        {n:'14', l:'equipos comerciales implementados'},
+        {n:'100%', l:'del proceso documentado'}
+      ],
+      dolores: [
+        {n:'01', t:'El seguimiento vive en la cabeza del vendedor', d:'Si se enferma o se va, se va también la mitad del pipeline.'},
+        {n:'02', t:'Nadie sabe cuántas propuestas hay abiertas', d:'Cada gerente tiene su propio Excel y ninguno cuadra con el otro.'},
+        {n:'03', t:'El lead espera dos días una respuesta', d:'Y cuando llega, ya compró donde le contestaron en diez minutos.'},
+        {n:'04', t:'Compraron un CRM que nadie usa', d:'Se implementó sin proceso detrás, así que el equipo volvió al WhatsApp suelto.'}
+      ],
+      servicios: [
+        {t:'Implementación de CRM', d:'Lo configuramos con sus etapas reales y migramos su base actual.'},
+        {t:'Automatización del seguimiento', d:'Respuestas, recordatorios y asignación sin que nadie tenga que acordarse.'},
+        {t:'Adopción del equipo', d:'Entrenamos a los vendedores y ajustamos lo que estorba en el día a día.'}
+      ],
+      tabs: VISTAS.map(x => ({ label: x, style: this.tab(x === v), pick: () => this.setState({ vista: x }) })),
+      vistaActual: v,
+      esPipeline: v === 'Pipeline',
+      esAutomatizacion: v === 'Automatizaciones',
+      esMetricas: v === 'Métricas',
+      etapas: ETAPAS,
+      flujos: FLUJOS,
+      metricas: METRICAS.map(m => ({ nombre: m.nombre, valor: m.valor, barra: 'height:100%;width:' + m.pct + '%;background:#0b3fd6' })),
+      casos: [
+        {n:'−62%', t:'Tiempo de primera respuesta', d:'De 19 horas a 40 minutos automatizando la asignación y el primer mensaje.', quien:'Distribuidora industrial · 22 vendedores'},
+        {n:'+31%', t:'Cierres por trimestre', d:'Mismo equipo, mismos leads: la diferencia fue no dejar tratos sin próxima tarea.', quien:'Servicios B2B · 9 vendedores'},
+        {n:'100%', t:'Adopción a los 30 días', d:'Todo el equipo registrando en el CRM sin recordatorios del gerente.', quien:'Constructora · 14 comerciales'}
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
