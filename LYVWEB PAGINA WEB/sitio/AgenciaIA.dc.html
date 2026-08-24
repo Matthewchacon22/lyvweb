@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>VECTOR | Agentes de IA y automatización para negocios</title>
+<meta name="description" content="Diseñamos agentes de IA y automatizaciones conectadas a las herramientas que ya usas. Arma tu agente y cuéntanos qué necesitas.">
+<meta name="theme-color" content="#05060a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:#05060a;color:#e6ebf2;font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+  a{color:#6ceec4;text-decoration:none}
+  a:hover{color:#a5f7dd}
+  ::selection{background:#6ceec4;color:#05060a}
+  button{font-family:inherit;cursor:pointer;border:0;background:transparent}
+  @keyframes vec-blink{0%,100%{opacity:1}50%{opacity:0.2}}
+  @keyframes vec-travel{0%{transform:translateY(0);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateY(var(--vec-d,280px));opacity:0}}
+  @media(max-width:760px){
+    [data-split]{border-right:0 !important}
+    [data-split="pad"]{padding-left:26px !important;padding-right:26px !important}
+    [data-split="tight"]{padding-right:0 !important}
+    header nav{flex-wrap:wrap !important;gap:8px 16px !important}
+    header nav a{padding:13px 0 !important;display:inline-block !important}
+    [data-casos]{grid-template-columns:1fr !important;gap:6px !important}
+  }
+</style>
+</helmet>
+
+<div style="overflow:hidden;background:#05060a">
+
+  <div style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:9px 26px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(230,235,242,0.55)">
+      <span style="display:flex;align-items:center;gap:8px"><span style="width:6px;height:6px;background:#6ceec4;display:block;animation:vec-blink 1.4s ease-in-out infinite"></span>SISTEMA OPERATIVO · 34 agentes en producción</span>
+      <span>latencia media 4.2 s · uptime 99.94%</span>
+      <span style="color:rgba(230,235,242,0.4)">BAQ / COL</span>
+    </div>
+  </div>
+
+  <header style="border-bottom:1px solid rgba(230,235,242,0.12);position:sticky;top:0;z-index:60;background:rgba(5,6,10,0.92);backdrop-filter:blur(12px)">
+    <div style="max-width:1360px;margin:0 auto;padding:14px 26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+      <a href="#top" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;letter-spacing:0.14em;color:#e6ebf2">VECTOR<span style="color:#6ceec4">/ai</span></a>
+      <nav style="display:flex;gap:22px;font-family:'JetBrains Mono',monospace;font-size:12px">
+        <a href="#flujo" style="color:rgba(230,235,242,0.6)">01_flujo</a>
+        <a href="#capacidades" style="color:rgba(230,235,242,0.6)">02_capacidades</a>
+        <a href="#configurador" style="color:rgba(230,235,242,0.6)">03_configurador</a>
+        <a href="#registro" style="color:rgba(230,235,242,0.6)">04_registro</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+      <div data-split="pad" style="padding:64px 40px 56px 26px;border-right:1px solid rgba(230,235,242,0.12);min-width:0">
+        <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6ceec4">&gt; agentes en producción, no en demo</div>
+        <h1 data-reveal style="font-size:clamp(38px,6.6vw,88px);line-height:0.98;letter-spacing:-0.04em;font-weight:700;margin:22px 0 0;max-width:17ch">Automatiza lo repetitivo. <span style="color:#6ceec4">Deja que tu equipo piense.</span></h1>
+        <p data-reveal style="font-size:17.5px;line-height:1.7;color:rgba(230,235,242,0.66);margin-top:22px;max-width:50ch;text-wrap:pretty">Agentes de IA y flujos que se conectan a las herramientas que ya usas. No reemplazamos tu operación: reemplazamos el trabajo manual dentro de ella.</p>
+        <div data-reveal style="display:flex;gap:24px;flex-wrap:wrap;margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:12.5px">
+          <a href="#configurador" style="border-bottom:1px solid #6ceec4;padding-bottom:5px">[ armar mi agente ]</a>
+          <a href="#registro" style="color:rgba(230,235,242,0.6);border-bottom:1px solid rgba(230,235,242,0.3);padding-bottom:5px">[ ver casos ]</a>
+        </div>
+        <div data-reveal style="margin-top:38px;height:clamp(180px,22vw,280px);border-radius:6px;overflow:hidden"><img src="./img/vector-hero.jpg" alt="VECTOR AI — flujos de datos e inteligencia artificial" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+
+      <div style="padding:44px 26px 44px 40px;min-width:0;background:radial-gradient(80% 70% at 80% 20%,rgba(139,124,255,0.16),transparent 62%)">
+        <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(230,235,242,0.45);margin-bottom:18px">grafo_activo.json — flujo de captura de leads</div>
+        <div id="flujo" style="display:grid;position:relative">
+          <span style="position:absolute;left:11px;top:8px;width:5px;height:5px;border-radius:50%;background:#6ceec4;box-shadow:0 0 12px #6ceec4;transform:translateX(-2px);animation:vec-travel 4.2s linear infinite;--vec-d:300px"></span>
+          <sc-for list="{{ nodos }}" as="n" hint-placeholder-count="5">
+            <div data-reveal style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:16px">
+              <div style="display:flex;flex-direction:column;align-items:center">
+                <span style="{{ n.dot }}"></span>
+                <span style="{{ n.line }}"></span>
+              </div>
+              <div style="padding-bottom:20px;min-width:0">
+                <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between">
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:{{ n.color }}">{{ n.tag }}</span>
+                  <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(230,235,242,0.4)">{{ n.tiempo }}</span>
+                </div>
+                <div style="font-size:17px;font-weight:600;margin-top:5px">{{ n.t }}</div>
+                <div style="font-size:14px;line-height:1.6;color:rgba(230,235,242,0.6);margin-top:4px">{{ n.d }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:0 26px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+          <div data-reveal style="padding:26px 22px 26px 0;border-right:1px solid rgba(230,235,242,0.1)">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:500;color:#6ceec4">{{ s.n }}</div>
+            <div style="font-size:13px;color:rgba(230,235,242,0.55);margin-top:6px;line-height:1.45;max-width:24ch">{{ s.l }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="capacidades" style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:56px 26px 20px">
+      <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:baseline;justify-content:space-between">
+        <h2 data-reveal style="font-size:clamp(26px,4.2vw,50px);font-weight:700;letter-spacing:-0.035em">Entradas, procesos y salidas</h2>
+        <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(230,235,242,0.5)">04 módulos disponibles</div>
+      </div>
+    </div>
+    <div style="max-width:1360px;margin:0 auto;padding:0 26px 20px">
+      <sc-for list="{{ servicios }}" as="s" hint-placeholder-count="4">
+        <div data-reveal data-hover-row style="display:grid;grid-template-columns:64px minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,0.9fr);gap:22px;align-items:baseline;padding:24px 8px;border-top:1px solid rgba(230,235,242,0.14);transition:background .3s ease">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#8b7cff">{{ s.n }}</div>
+          <div style="font-size:clamp(19px,2.4vw,26px);font-weight:600;letter-spacing:-0.02em">{{ s.t }}</div>
+          <div style="font-size:15px;line-height:1.65;color:rgba(230,235,242,0.64)">{{ s.d }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(230,235,242,0.5);line-height:1.9">{{ s.io }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="configurador" style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:56px 26px 20px">
+      <h2 data-reveal style="font-size:clamp(26px,4.2vw,50px);font-weight:700;letter-spacing:-0.035em">Arma tu agente y mira el estimado</h2>
+      <p data-reveal style="font-size:16.5px;line-height:1.7;color:rgba(230,235,242,0.64);margin-top:12px;max-width:56ch">Escoge qué necesitas y a qué se conecta: el precio y el plazo se recalculan al instante. Lo confirmamos en la llamada de alcance.</p>
+    </div>
+    <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+      <div data-split="pad" style="padding:0 40px 46px 26px;border-right:1px solid rgba(230,235,242,0.12);min-width:0">
+        <div style="border-top:1px solid rgba(230,235,242,0.14);padding:22px 0">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6ceec4">01 / qué necesitas</div>
+          <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:14px">
+            <sc-for list="{{ opTipo }}" as="o" hint-placeholder-count="4">
+              <button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border-top:1px solid rgba(230,235,242,0.14);padding:22px 0">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6ceec4">02 / se conecta a · {{ nInteg }} activas</div>
+          <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:14px">
+            <sc-for list="{{ opInteg }}" as="o" hint-placeholder-count="6">
+              <button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border-top:1px solid rgba(230,235,242,0.14);border-bottom:1px solid rgba(230,235,242,0.14);padding:22px 0">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6ceec4">03 / atiende</div>
+          <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:14px">
+            <sc-for list="{{ opCanal }}" as="o" hint-placeholder-count="3">
+              <button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:0 26px 46px 40px;min-width:0;background:linear-gradient(180deg,rgba(108,238,196,0.05),transparent 40%)">
+        <div style="border-top:1px solid rgba(230,235,242,0.14);padding-top:22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:rgba(230,235,242,0.5)">tu_agente.json</div>
+          <div style="margin-top:16px">
+            <sc-for list="{{ lineas }}" as="l" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:11px 0;border-bottom:1px solid rgba(230,235,242,0.1);font-family:'JetBrains Mono',monospace;font-size:13px">
+                <span style="color:rgba(230,235,242,0.66)">{{ l.k }}</span>
+                <span style="text-align:right">{{ l.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(230,235,242,0.3)">
+            <div style="font-size:clamp(19px,2.4vw,26px);font-weight:600;line-height:1.35;letter-spacing:-0.02em">{{ resumen }}</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:rgba(230,235,242,0.5);margin-top:22px">estimado_total</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(30px,4.2vw,48px);font-weight:500;letter-spacing:-0.02em;color:#6ceec4;margin-top:6px">{{ precio }}</div>
+            <div style="font-size:14px;color:rgba(230,235,242,0.6);margin-top:6px">{{ plazo }}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:22px;margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:12.5px">
+              <a href="{{ waLink }}" target="_blank" rel="noopener" style="border-bottom:1px solid #6ceec4;padding-bottom:5px">[ enviar por WhatsApp ]</a>
+              <span style="color:rgba(230,235,242,0.45)">un mes de ajustes incluido</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="registro" style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:56px 26px 30px">
+      <h2 data-reveal style="font-size:clamp(26px,4.2vw,50px);font-weight:700;letter-spacing:-0.035em">Sistemas en producción</h2>
+      <div data-casos style="margin-top:30px;display:grid;grid-template-columns:110px minmax(0,1fr) minmax(0,1.2fr) 210px;gap:20px;padding-bottom:10px;border-bottom:1px solid rgba(230,235,242,0.3);font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(230,235,242,0.5);text-transform:uppercase;letter-spacing:0.08em">
+        <span>Sector</span><span>Sistema</span><span>Qué hace</span><span>Resultado medido</span>
+      </div>
+      <sc-for list="{{ casos }}" as="c" hint-placeholder-count="3">
+        <div data-reveal data-casos style="display:grid;grid-template-columns:110px minmax(0,1fr) minmax(0,1.2fr) 210px;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(230,235,242,0.12)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#8b7cff">{{ c.sector }}</span>
+          <span style="font-size:17px;font-weight:600;letter-spacing:-0.015em">{{ c.t }}</span>
+          <span style="font-size:14.5px;line-height:1.6;color:rgba(230,235,242,0.62)">{{ c.d }}</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.8"><span style="color:#6ceec4">{{ c.m1 }}</span><br><span style="color:rgba(230,235,242,0.55)">{{ c.m2 }}</span></span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid rgba(230,235,242,0.12)">
+    <div style="max-width:1360px;margin:0 auto;padding:60px 26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center">
+      <h2 data-reveal style="font-size:clamp(26px,4.2vw,52px);font-weight:700;letter-spacing:-0.04em;line-height:1.02;max-width:22ch">¿Te mostramos cómo se vería corriendo en tu negocio?</h2>
+      <div data-reveal>
+        <p style="font-size:16.5px;line-height:1.7;color:rgba(230,235,242,0.66);max-width:44ch">Una llamada corta para identificar el primer proceso que vale la pena automatizar. Salimos de ahí con un diagrama, no con una promesa.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:24px;margin-top:22px;font-family:'JetBrains Mono',monospace;font-size:12.5px">
+          <a href="https://wa.me/573000000000" target="_blank" rel="noopener" style="border-bottom:1px solid #6ceec4;padding-bottom:5px">[ agendar llamada ]</a>
+          <a href="#configurador" style="color:rgba(230,235,242,0.6);border-bottom:1px solid rgba(230,235,242,0.3);padding-bottom:5px">[ volver al configurador ]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1360px;margin:0 auto;padding:22px 26px">
+    <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:rgba(230,235,242,0.5)">
+      <span>VECTOR/ai · automatización con IA · Barranquilla</span>
+      <span>+57 300 000 0000</span>
+      <a href="Catalogo.dc.html">← volver al portafolio</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid rgba(230,235,242,0.12)">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6ceec4">@vector.ia</span>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="https://instagram.com/vector.ia" target="_blank" rel="noopener" aria-label="Instagram" style="width:44px;height:44px;border:1px solid rgba(230,235,242,0.25);border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(230,235,242,0.75)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="https://tiktok.com/@vector.ia" target="_blank" rel="noopener" aria-label="TikTok" style="width:44px;height:44px;border:1px solid rgba(230,235,242,0.25);border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(230,235,242,0.75)"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.5 3h-2.6v12.2a2.3 2.3 0 1 1-2-2.3v-2.7a5 5 0 1 0 4.6 5V9.4c1 .7 2.2 1.1 3.5 1.1V7.9c-1.9-.2-3.2-1.5-3.5-3.4z"></path></svg></a>
+        <a href="https://facebook.com/vector.ia" target="_blank" rel="noopener" aria-label="Facebook" style="width:44px;height:44px;border:1px solid rgba(230,235,242,0.25);border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(230,235,242,0.75)"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.5 1.6-1.5h1.3V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.9V11H8.1v3h2.4v7z"></path></svg></a>
+        <a href="https://x.com/vector_ia" target="_blank" rel="noopener" aria-label="X" style="width:44px;height:44px;border:1px solid rgba(230,235,242,0.25);border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(230,235,242,0.75)"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M4 3h4.3l3.9 5.2L16.9 3H21l-6.3 7.6L21.4 21h-4.3l-4.2-5.6L8 21H4l6.6-7.9z"></path></svg></a>
+        <a href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="WhatsApp" style="width:44px;height:44px;border-radius:6px;background:#6ceec4;color:#05060a;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 2a7 7 0 1 1-3.6 13l-.3-.2-2.2.6.6-2.2-.2-.3A7 7 0 0 1 12 5zm-2.6 3.4c-.2 0-.5.1-.7.3-.3.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.5 1.9.7 2.3.6 2.7.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.4-.5c.1-.2.2-.3.2-.5s0-.3-.1-.4l-.7-1.7c-.2-.4-.4-.3-.5-.3z"></path></svg></a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:900}}">
+const TIPOS = [
+  {label:'Chatbot de ventas', base:6.5},
+  {label:'Agente de soporte', base:9},
+  {label:'Automatización interna', base:5},
+  {label:'Agente de voz', base:14}
+];
+const INTEG = ['WhatsApp','CRM','Correo','Base de datos','Calendario','ERP'];
+const CANALES = ['Clientes nuevos', 'Clientes actuales', 'Equipo interno'];
+
+class Component extends DCLogic {
+  state = { tipo: 0, integ: ['WhatsApp','CRM'], canal: 0 };
+
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; el.style.transition = 'opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1)'; });
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const sweep = () => els.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.92) show(el); });
+    this.io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { this.ioFired = true; show(e.target); this.io.unobserve(e.target); }
+    }), { threshold: 0.05 });
+    els.forEach(el => this.io.observe(el));
+    requestAnimationFrame(sweep);
+    window.addEventListener('scroll', sweep, { passive: true });
+    setTimeout(() => { if (!this.ioFired) { this.io.disconnect(); sweep(); } }, 900);
+    document.querySelectorAll('[data-hover-row]').forEach(el => {
+      el.addEventListener('mouseenter', () => { el.style.background = 'rgba(108,238,196,0.05)'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; });
+    });
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+
+  opt(active) {
+    return 'font-family:"JetBrains Mono",monospace;font-size:13px;padding:0 0 5px;white-space:nowrap;flex-shrink:0;transition:all .2s ease;border-bottom:1px solid ' +
+      (active ? '#6ceec4;color:#6ceec4' : 'rgba(230,235,242,0.25);color:rgba(230,235,242,0.6)');
+  }
+
+  renderVals() {
+    const s = this.state;
+    const t = TIPOS[s.tipo].label;
+    const integTxt = s.integ.length ? s.integ.join(' · ') : 'sin conexiones';
+    const total = TIPOS[s.tipo].base + Math.max(0, s.integ.length - 1) * 1.4 + (s.canal === 2 ? 1.2 : 0);
+    const semanas = Math.max(2, Math.round(total / 3));
+    const precio = '$' + total.toFixed(1) + ' M COP';
+    const msg = 'Hola VECTOR, quiero un ' + t.toLowerCase() + ' conectado a ' + integTxt + ', para ' + CANALES[s.canal].toLowerCase() + '. Estimado: ' + precio + '.';
+    const dot = (c) => 'width:11px;height:11px;border-radius:50%;background:' + c + ';display:block;flex-shrink:0';
+    const line = 'width:1px;flex:1;background:repeating-linear-gradient(180deg,rgba(230,235,242,0.35) 0 5px,transparent 5px 10px);margin:4px 0';
+    return {
+      nodos: [
+        {tag:'ENTRADA', color:'#6ceec4', t:'Entra el lead', d:'Formulario, WhatsApp o llamada perdida: todo cae al mismo punto.', tiempo:'t+0s', dot: dot('#6ceec4'), line},
+        {tag:'PROCESO', color:'#8b7cff', t:'El agente responde', d:'Contesta con contexto de tu catálogo, en tu tono.', tiempo:'t+5s', dot: dot('#8b7cff'), line},
+        {tag:'PROCESO', color:'#8b7cff', t:'Califica la intención', d:'Pregunta lo justo para saber si vale la pena pasarlo a un humano.', tiempo:'t+2m', dot: dot('#8b7cff'), line},
+        {tag:'PROCESO', color:'#8b7cff', t:'Registra en el CRM', d:'Crea el trato con resumen, etiquetas y próxima tarea asignada.', tiempo:'auto', dot: dot('#8b7cff'), line},
+        {tag:'SALIDA', color:'#6ceec4', t:'Escala al vendedor', d:'Si es caliente, notifica al de turno con el resumen listo para llamar.', tiempo:'t+3m', dot: dot('#6ceec4'), line:'width:0'}
+      ],
+      stats: [
+        {n:'34', l:'agentes en producción'},
+        {n:'1.2 M', l:'mensajes procesados al mes'},
+        {n:'92%', l:'casos resueltos sin humano'},
+        {n:'24/7', l:'atendiendo sin turnos'}
+      ],
+      servicios: [
+        {n:'01', t:'Chatbots de venta', d:'Atienden, cotizan y agendan por WhatsApp con tu catálogo real.', io:'in: mensaje\nout: cita + trato'},
+        {n:'02', t:'Agentes de soporte', d:'Resuelven las preguntas repetidas y escalan solo lo que importa.', io:'in: ticket\nout: respuesta + estado'},
+        {n:'03', t:'Automatización de procesos', d:'Facturas, reportes y traspasos entre sistemas sin copiar y pegar.', io:'in: evento\nout: registro'},
+        {n:'04', t:'Agentes de voz', d:'Llaman, confirman citas y recuperan carritos con voz natural.', io:'in: lista\nout: llamada + resultado'}
+      ],
+      opTipo: TIPOS.map((x, i) => ({ label: x.label, style: this.opt(i === s.tipo), pick: () => this.setState({ tipo: i }) })),
+      precio,
+      plazo: 'Entrega estimada en ' + semanas + ' semanas · pago 50 / 50',
+      opInteg: INTEG.map(x => ({
+        label: x, style: this.opt(s.integ.indexOf(x) > -1),
+        pick: () => this.setState(p => ({ integ: p.integ.indexOf(x) > -1 ? p.integ.filter(y => y !== x) : p.integ.concat([x]) }))
+      })),
+      nInteg: s.integ.length,
+      opCanal: CANALES.map((x, i) => ({ label: x, style: this.opt(i === s.canal), pick: () => this.setState({ canal: i }) })),
+      lineas: [
+        {k:'módulo', v: t},
+        {k:'conexiones', v: integTxt},
+        {k:'atiende a', v: CANALES[s.canal]}
+      ],
+      resumen: 'Un ' + t.toLowerCase() + ' que atiende a ' + CANALES[s.canal].toLowerCase() + ' y trabaja sobre ' + integTxt + '.',
+      waLink: 'https://wa.me/573000000000?text=' + encodeURIComponent(msg),
+      casos: [
+        {sector:'retail', t:'Cadena de electrodomésticos', d:'Chatbot que resuelve dudas, verifica inventario y agenda entrega sin pasar por un asesor.', m1:'−71% consultas manuales', m2:'4.1x leads atendidos'},
+        {sector:'salud', t:'Red de consultorios', d:'Agente que confirma y reprograma citas por WhatsApp la noche anterior.', m1:'−48% inasistencias', m2:'18 h ahorradas / semana'},
+        {sector:'logística', t:'Operador de última milla', d:'Automatización que arma la guía, notifica al cliente y cierra el caso.', m1:'92% casos sin humano', m2:'6 min de respuesta'}
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
